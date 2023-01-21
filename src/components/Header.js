@@ -1,58 +1,168 @@
+import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <div className="drawer">
-        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col">
-          {/* <!-- Navbar --> */}
-          <div className="w-full navbar bg-base-300">
-            <div className="flex-none lg:hidden">
-              <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="inline-block w-6 h-6 stroke-current"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
-              </label>
-            </div>
-            <div className="flex-1 px-2 mx-2">Navbar Title</div>
-            <div className="flex-none hidden lg:block">
-              <ul className="menu menu-horizontal">
-                {/* <!-- Navbar menu content here --> */}
-                <li>
-                  <a>Navbar Item 1</a>
-                </li>
-                <li>
-                  <a>Navbar Item 2</a>
-                </li>
-              </ul>
+      <div class="z-[100] absolute w-full pt-10">
+        <div className="container mx-auto">
+          <div class=" grid items-center grid-cols-2 lg:grid-cols-3">
+            <ul class="items-center hidden space-x-8 lg:flex">
+              <li>
+                <NavLink className='text-lg font-medium'>Home</NavLink>
+              </li>
+              <li>
+                <NavLink className='text-lg font-medium'>Blog</NavLink>
+              </li>
+              <li>
+                <NavLink className='text-lg font-medium'>Course</NavLink>
+              </li>
+            </ul>
+            <a
+              href="/"
+              aria-label="Company"
+              title="Company"
+              class="inline-flex items-center lg:mx-auto"
+            >
+              <svg
+                class="w-8 text-deep-purple-accent-400"
+                viewBox="0 0 24 24"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeMiterlimit="10"
+                stroke="currentColor"
+                fill="none"
+              >
+                <rect x="3" y="1" width="7" height="12" />
+                <rect x="3" y="17" width="7" height="6" />
+                <rect x="14" y="1" width="7" height="6" />
+                <rect x="14" y="11" width="7" height="12" />
+              </svg>
+              <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                Company
+              </span>
+            </a>
+            <ul class="items-center hidden ml-auto lg:flex">
+              <li>
+                <Link className="text-lg font-medium mr-5">Log In</Link>
+              </li>
+              <li>
+                <Link className=" text-white bg-black/90 py-3 px-4 rounded-full">Sign Up</Link>
+              </li>
+            </ul>
+            <div class="ml-auto lg:hidden">
+              <button
+                aria-label="Open Menu"
+                title="Open Menu"
+                class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
+                onClick={() => setIsMenuOpen(true)}
+              >
+                <FiMenu />
+              </button>
+              {isMenuOpen && (
+                <div class="absolute top-0 left-0 w-full">
+                  <div class="p-5 bg-white border rounded shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                      <div>
+                        <a
+                          href="/"
+                          aria-label="Company"
+                          title="Company"
+                          class="inline-flex items-center"
+                        >
+                          <svg
+                            class="w-8 text-deep-purple-accent-400"
+                            viewBox="0 0 24 24"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeMiterlimit="10"
+                            stroke="currentColor"
+                            fill="none"
+                          >
+                            <rect x="3" y="1" width="7" height="12" />
+                            <rect x="3" y="17" width="7" height="6" />
+                            <rect x="14" y="1" width="7" height="6" />
+                            <rect x="14" y="11" width="7" height="12" />
+                          </svg>
+                          <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                            Company
+                          </span>
+                        </a>
+                      </div>
+                      <div>
+                        <button
+                          aria-label="Close Menu"
+                          title="Close Menu"
+                          class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          <FiMenu />
+                        </button>
+                      </div>
+                    </div>
+                    <nav>
+                      <ul class="space-y-4">
+                        <li>
+                          <a
+                            href="/"
+                            aria-label="Our product"
+                            title="Our product"
+                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Product
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/"
+                            aria-label="Our product"
+                            title="Our product"
+                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Features
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/"
+                            aria-label="Product pricing"
+                            title="Product pricing"
+                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Pricing
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/"
+                            aria-label="Sign in"
+                            title="Sign in"
+                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Sign in
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/"
+                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            aria-label="Sign up"
+                            title="Sign up"
+                          >
+                            Sign up
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-          {/* <!-- Page content here --> */}
-          <Outlet />
-        </div>
-        <div className="drawer-side">
-          <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 bg-base-100">
-            {/* <!-- Sidebar content here --> */}
-            <li>
-              <a>Sidebar Item 1</a>
-            </li>
-            <li>
-              <a>Sidebar Item 2</a>
-            </li>
-          </ul>
         </div>
       </div>
     </>

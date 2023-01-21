@@ -11,8 +11,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-first: #FFCD70;
+}
+
 body {
   max-width: 1440px;
   margin: auto;
   font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+
+/* home top-banner */
+.top-banner {
+  background-color: var(--color-first);
 }
