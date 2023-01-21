@@ -1,92 +1,50 @@
 import { FiMenu } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
-      <div className="drawer drawer-end">
-        <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
-          {/* <!-- Page content start --> */}
-          <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8">
-            <div class="relative grid items-center grid-cols-2 lg:grid-cols-3">
-              <ul class="items-center hidden space-x-8 lg:flex">
+      <div className="drawer">
+        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col">
+          {/* <!-- Navbar --> */}
+          <div className="w-full navbar bg-base-300">
+            <div className="flex-none lg:hidden">
+              <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block w-6 h-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
+            </div>
+            <div className="flex-1 px-2 mx-2">Navbar Title</div>
+            <div className="flex-none hidden lg:block">
+              <ul className="menu menu-horizontal">
+                {/* <!-- Navbar menu content here --> */}
                 <li>
-                  <a
-                    href="/"
-                    aria-label="Our product"
-                    title="Our product"
-                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  >
-                    Product
-                  </a>
+                  <a>Navbar Item 1</a>
                 </li>
                 <li>
-                  <a
-                    href="/"
-                    aria-label="Our product"
-                    title="Our product"
-                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    aria-label="Product pricing"
-                    title="Product pricing"
-                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  >
-                    Pricing
-                  </a>
+                  <a>Navbar Item 2</a>
                 </li>
               </ul>
-              <Link
-                to="/"
-                aria-label="Online Tutorin"
-                title="Online Tutorin"
-                class="inline-flex items-center lg:mx-auto"
-              >
-                <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                  Online-Tutor
-                </span>
-              </Link>
-              <ul class="items-center hidden ml-auto space-x-8 lg:flex">
-                <li>
-                  <a
-                    href="/"
-                    aria-label="Sign in"
-                    title="Sign in"
-                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                  >
-                    Sign in
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                    aria-label="Sign up"
-                    title="Sign up"
-                  >
-                    Sign up
-                  </a>
-                </li>
-              </ul>
-              <div class="ml-auto lg:hidden">
-                <label htmlFor="nav-drawer" className="drawer-button">
-                  <FiMenu className="text-2xl text-black" />
-                </label>
-              </div>
             </div>
           </div>
-          {/* <!-- Page content end --> */}
+          {/* <!-- Page content here --> */}
+          <Outlet />
         </div>
-
         <div className="drawer-side">
-          <label htmlFor="nav-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-1/2 bg-base-100 text-base-content">
+          <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
+          <ul className="menu p-4 w-80 bg-base-100">
             {/* <!-- Sidebar content here --> */}
             <li>
               <a>Sidebar Item 1</a>
