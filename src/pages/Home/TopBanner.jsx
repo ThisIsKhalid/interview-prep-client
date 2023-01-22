@@ -1,13 +1,14 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import bannerImg from "../../assets/images/Coding-workshop.png";
 
 const TopBanner = () => {
   return (
-    <section className="top-banner h-[800px] pt-40">
+    <section className="top-banner h-full pt-40">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 items-center">
-          <div>
-            <h1 className="text-6xl text-gray-900 leading-tight font-medium">
+          <div className="mx-auto">
+            <h1 className="text-7xl text-gray-900 leading-tight font-medium">
               Improve Your <br />{" "}
               <span className="bg-gray-900 text-[#FFCD70] px-5 py-1 rounded-full italic">
                 Skills
@@ -26,8 +27,8 @@ const TopBanner = () => {
           </div>
         </div>
 
-        <div>
-            
+        <div className="w-3/4 mx-auto">
+          <img className="w-full" src={bannerImg} alt="" />
         </div>
       </div>
     </section>

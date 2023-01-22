@@ -1,12 +1,14 @@
-import React from 'react';
-import TopBanner from './TopBanner';
+import React from "react";
+import StatData from "./StatData";
+import TopBanner from "./TopBanner";
 
 const Home = () => {
-    return (
-        <>
-            <TopBanner/>
-        </>
-    );
+  return (
+    <>
+      <TopBanner />
+      <StatData />
+    </>
+  );
 };
 
 export default Home;
