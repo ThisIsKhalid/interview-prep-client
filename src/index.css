@@ -13,6 +13,7 @@
 
 :root {
   --color-first: #FFCD70;
+  --color-second: #FFE5D9;
 }
 
 body {
@@ -25,4 +26,8 @@ body {
 /* home top-banner */
 .top-banner {
   background-color: var(--color-first);
+}
+/* home we provide */
+.we-provide {
+  background-color: var(--color-second);
 }
