@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <div class="z-[100] absolute w-full pt-10">
+      <div class="z-[100] absolute w-full pt-10 px-5 lg:px-0">
         <div className="container mx-auto">
           <div class=" grid items-center grid-cols-2 lg:grid-cols-3">
             <ul class="items-center hidden space-x-8 lg:flex">
