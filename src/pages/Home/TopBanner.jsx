@@ -10,17 +10,14 @@ const TopBanner = () => {
       <div className="container mx-auto">
         {/* top banner up */}
         <div className="grid lg:grid-cols-2 items-center px-5 lg:p-0">
-          <div className="">
-            <h1 className="lg:text-7xl text-5xl text-gray-900 leading-tight font-medium">
-              Improve Your <br />{" "}
-              <span className="bg-gray-900 text-[#FFCD70] px-5 py-1 rounded-full italic">
-                Skills
-              </span>{" "}
-              Faster
-            </h1>
+          <div className="lg:text-5xl text-4xl text-center lg:text-left text-gray-900 font-light flex flex-col gap-2">
+            <h2 className=" line-through">A Better</h2>
+            <h1 className="lg:text-6xl text-5xl font-bold">The Only Way</h1>
+            <h2>to Preparetion for</h2>
+            <h1 className="font-medium">Front-End Interviews</h1>
           </div>
-          <div>
-            <p className="lg:text-xl text-base lg:w-5/6 w-full mt-6 lg:mt-0 mb-6 leading-normal text-gray-700">
+          <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-left">
+            <p className="lg:text-xl text-base lg:w-5/6 w-full mt-6 lg:mt-0 leading-normal text-gray-700">
               Speed Up The Skill Acquisition Process By Finding Unlimited
               Courses That Matches Your Niche.
             </p>
