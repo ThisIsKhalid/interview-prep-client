@@ -1,6 +1,5 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-import bannerImg from "../../assets/images/Coding-workshop.png";
 import onlinePrep from "../../assets/images/onlinePrep.json";
 import Lottie from "lottie-react";
 

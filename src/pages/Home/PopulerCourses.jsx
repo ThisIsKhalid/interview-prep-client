@@ -3,7 +3,7 @@ import Course from "../../components/Course";
 
 const PopulerCourses = () => {
   return (
-    <section className="bg-gray-800 py-20">
+    <section className="bg-gray-800 py-20 px-5">
       <div className="container mx-auto">
         <h1 className="lg:text-5xl text-4xl text-white font-medium text-center mb-20">
           Populer{" "}
