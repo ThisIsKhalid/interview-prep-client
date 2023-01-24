@@ -1,4 +1,5 @@
 import React from "react";
+import MobileApp from "./MobileApp";
 import OurFeature from "./OurFeature";
 import PopulerCourses from "./PopulerCourses";
 import StartingProcess from "./StartingProcess";
@@ -15,6 +16,7 @@ const Home = () => {
       <OurFeature />
       <PopulerCourses />
       <StartingProcess />
+      <MobileApp />
     </>
   );
 };

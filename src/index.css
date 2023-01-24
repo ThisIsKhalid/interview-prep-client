@@ -29,6 +29,6 @@ body {
   background-color: var(--color-first);
 }
 /* home we provide */
-.we-provide {
+.we-provide, .mobileApp {
   background-color: var(--color-second);
 }
