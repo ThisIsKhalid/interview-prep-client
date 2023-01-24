@@ -10,7 +10,7 @@ const OurFeature = () => {
       <section className="py-20">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 bg-[#ffefe7db] px-10 py-10 rounded-lg">
-            <div className="lg:col-span-2 flex items-center bg-gray-900 rounded-lg shadow-xl lg:h-64 py-5 lg:py-0">
+            <div className="lg:col-span-2 flex items-center bg-gray-800 rounded-lg shadow-xl lg:h-64 py-5 lg:py-0">
               <div className="px-10">
                 <h1 className="lg:text-5xl text-4xl text-white font-medium leading-tight mb-6">
                   Our Special

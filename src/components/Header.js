@@ -31,10 +31,8 @@ const Header = () => {
                 <NavLink className="text-lg font-medium">Course</NavLink>
               </li>
             </ul>
-            <a
-              href="/"
-              aria-label="Company"
-              title="Company"
+            <Link
+              to="/"
               class="inline-flex items-center lg:mx-auto"
             >
               <svg
@@ -52,10 +50,10 @@ const Header = () => {
                 <rect x="14" y="1" width="7" height="6" />
                 <rect x="14" y="11" width="7" height="12" />
               </svg>
-              <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                Company
+              <span class="ml-2 text-3xl font-bold text-gray-900">
+                Interview Prep
               </span>
-            </a>
+            </Link>
             <ul class="items-center hidden ml-auto lg:flex">
               <li>
                 <Link className="text-lg font-medium mr-5">Log In</Link>
@@ -67,9 +65,7 @@ const Header = () => {
               </li>
             </ul>
             <div class="ml-auto lg:hidden">
-              <button
-                onClick={toggleDrawer}
-              >
+              <button onClick={toggleDrawer}>
                 <FiMenu className="text-2xl text-gray-800" />
               </button>
               <Drawer
@@ -87,9 +83,9 @@ const Header = () => {
                     />
                   </div>
                   <div className="flex flex-col items-end gap-2">
-                    <NavLink className='text-white'>Home</NavLink>
-                    <NavLink className='text-white'>Blog</NavLink>
-                    <NavLink className='text-white'>Course</NavLink>
+                    <NavLink className="text-white">Home</NavLink>
+                    <NavLink className="text-white">Blog</NavLink>
+                    <NavLink className="text-white">Course</NavLink>
                   </div>
                 </div>
               </Drawer>
