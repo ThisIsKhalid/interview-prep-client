@@ -4,7 +4,7 @@ import googlePlayLogo from '../../assets/icons/google-play.png'
 
 const MobileApp = () => {
     return (
-      <section className="bg-[#ffefe7db] pt-20">
+      <section className="bg-[#ffefe7db] pt-20 pb-10">
         <div className="container mx-auto">
           <div className="flex flex-col gap-5 items-center justify-center lg:text-5xl text-4xl text-gray-900">
             <h1 className="">Try Learning Free</h1>

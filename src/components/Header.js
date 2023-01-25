@@ -17,26 +17,26 @@ const Header = () => {
 
   return (
     <>
-      <div class="z-[100] absolute w-full pt-10 px-5 lg:px-0">
+      <div className="z-[100] absolute w-full pt-10 px-5 lg:px-0">
         <div className="container mx-auto">
-          <div class=" grid items-center grid-cols-2 lg:grid-cols-3">
-            <ul class="items-center hidden space-x-8 lg:flex">
+          <div className=" grid items-center grid-cols-2 lg:grid-cols-3">
+            <ul className="items-center hidden space-x-8 lg:flex">
               <li>
-                <NavLink className="text-lg font-medium">Home</NavLink>
+                <NavLink to='/' className="text-lg font-medium">Home</NavLink>
               </li>
               <li>
                 <NavLink className="text-lg font-medium">Blog</NavLink>
               </li>
               <li>
-                <NavLink className="text-lg font-medium">Course</NavLink>
+                <NavLink to='/course' className="text-lg font-medium">Course</NavLink>
               </li>
             </ul>
             <Link
               to="/"
-              class="inline-flex items-center lg:mx-auto"
+              className="inline-flex items-center lg:mx-auto"
             >
               <svg
-                class="w-8 text-deep-purple-accent-400"
+                className="w-8 text-deep-purple-accent-400"
                 viewBox="0 0 24 24"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -50,11 +50,11 @@ const Header = () => {
                 <rect x="14" y="1" width="7" height="6" />
                 <rect x="14" y="11" width="7" height="12" />
               </svg>
-              <span class="ml-2 text-3xl font-bold text-gray-900">
+              <span className="ml-2 text-3xl font-bold text-gray-900">
                 Interview Prep
               </span>
             </Link>
-            <ul class="items-center hidden ml-auto lg:flex">
+            <ul className="items-center hidden ml-auto lg:flex">
               <li>
                 <Link className="text-lg font-medium mr-5">Log In</Link>
               </li>
@@ -64,7 +64,7 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-            <div class="ml-auto lg:hidden">
+            <div className="ml-auto lg:hidden">
               <button onClick={toggleDrawer}>
                 <FiMenu className="text-2xl text-gray-800" />
               </button>
