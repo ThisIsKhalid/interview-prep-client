@@ -1,11 +1,10 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
-import { Link } from "react-router-dom";
 
-const Course = () => {
+const Course1 = () => {
   return (
-    <div className="h-full p-5 bg-gray-800 shadow-lg rounded-lg">
+    <div className="h-full p-5 bg-white shadow-lg rounded-lg">
       <div className="mb-6">
         <img
           className="w-full"
@@ -13,27 +12,25 @@ const Course = () => {
           alt=""
         />
       </div>
-      <div className="mb-2 flex justify-between items-center text-white">
+      <div className="mb-2 flex justify-between items-center">
         <div className="flex items-center gap-1">
           <FaStar className="text-[#FFCD70]" />
-          <p className="">4.9</p>
-          <p className="text-gray-400">(430 reviews)</p>
+          <p className="text-gray-900">4.9</p>
+          <p className="text-gray-500">(430 reviews)</p>
         </div>
         <div className="flex items-center gap-1">
           <FiClock />
           <p>02.33.35</p>
         </div>
       </div>
-      <h3 className="text-2xl font-medium mb-6 text-white">
+      <h3 className="text-2xl font-medium mb-6">
         Top JavaScript Interview Question
       </h3>
-      <Link to='/course/name'>
-        <button className="text-lg font-medium px-4 py-3 rounded-full hover:bg-[#FFCD70] text-[#FFCD70] hover:text-gray-900 border border-[#FFCD70]">
-          View Course
-        </button>
-      </Link>
+      <button className="text-lg font-medium border border-gray-900 px-4 py-3 rounded-full  hover:bg-gray-800 hover:text-[#FFCD70]">
+        View Course
+      </button>
     </div>
   );
 };
 
-export default Course;
+export default Course1;

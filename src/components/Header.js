@@ -17,24 +17,25 @@ const Header = () => {
 
   return (
     <>
-      <div className="z-[100] absolute w-full pt-10 px-5 lg:px-0">
+      <div className="bg-[#FFCD70] w-full py-6 px-5 lg:px-0">
         <div className="container mx-auto">
           <div className=" grid items-center grid-cols-2 lg:grid-cols-3">
             <ul className="items-center hidden space-x-8 lg:flex">
               <li>
-                <NavLink to='/' className="text-lg font-medium">Home</NavLink>
+                <NavLink to="/" className="text-lg font-medium">
+                  Home
+                </NavLink>
               </li>
               <li>
                 <NavLink className="text-lg font-medium">Blog</NavLink>
               </li>
               <li>
-                <NavLink to='/course' className="text-lg font-medium">Course</NavLink>
+                <NavLink to="/course" className="text-lg font-medium">
+                  Course
+                </NavLink>
               </li>
             </ul>
-            <Link
-              to="/"
-              className="inline-flex items-center lg:mx-auto"
-            >
+            <Link to="/" className="inline-flex items-center lg:mx-auto">
               <svg
                 className="w-8 text-deep-purple-accent-400"
                 viewBox="0 0 24 24"

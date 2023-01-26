@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "module": 1,
+    "title": "ReactJS",
+    "videos": [
+      { "title": "ReactJS 1", "vidId": "QFaFIcGhPoM" },
+      { "title": "ReactJS 2", "vidId": "9hb_0TZ_MVI" },
+      { "title": "ReactJS 3", "vidId": "9VIiLJL0H4Y" }
+    ]
+  },
+  {
+    "id": 2,
+    "module": 2,
+    "title": "NodeJS",
+    "videos": [
+      { "title": "NodeJS 1", "vidId": "LAUi8pPlcUM" },
+      { "title": "NodeJS 2", "vidId": "HXpPKhWOkAs" },
+      { "title": "NodeJS 3", "vidId": "2mWb7j1A3c8" }
+    ]
+  },
+  {
+    "id": 3,
+    "module": 3,
+    "title": "HTML",
+    "videos": [
+      { "title": "HTML 1", "vidId": "LAUi8pPlcUM" },
+      { "title": "HTML 2", "vidId": "HXpPKhWOkAs" },
+      { "title": "HTML 3", "vidId": "2mWb7j1A3c8" }
+    ]
+  }
+]

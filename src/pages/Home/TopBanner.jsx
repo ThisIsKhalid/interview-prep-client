@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 
 const TopBanner = () => {
   return (
-    <section className="top-banner h-full w-full pt-40">
+    <section className="top-banner h-full w-full pt-10">
       <div className="container mx-auto">
         {/* top banner up */}
         <div className="grid lg:grid-cols-2 items-center px-5 lg:p-0">

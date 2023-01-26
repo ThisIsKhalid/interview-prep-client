@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import CourseDetails from "../components/CourseDetails";
 import PlayVideo from "../components/PlayVideo";
 import MainLayout from "../layout/MainLayout";
 import Blog from "../pages/Blog/Blog";
@@ -27,7 +28,11 @@ export const router = createBrowserRouter([
         element: <Courses />,
       },
       {
-        path: "/course/:name",
+        path: "/course/name",
+        element: <CourseDetails />,
+      },
+      {
+        path: "/module/:id",
         element: <PlayVideo />,
       },
     ],
