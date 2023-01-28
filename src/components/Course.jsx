@@ -3,7 +3,8 @@ import { FaStar } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const Course = () => {
+const Course = ({course}) => {
+  const {title} = course;
   return (
     <div className="h-full p-5 bg-gray-800 shadow-lg rounded-lg">
       <div className="mb-6">
@@ -25,7 +26,7 @@ const Course = () => {
         </div>
       </div>
       <h3 className="text-2xl font-medium mb-6 text-white">
-        Top JavaScript Interview Question
+        {title}
       </h3>
       <Link to='/course/name'>
         <button className="text-lg font-medium px-4 py-3 rounded-full hover:bg-[#FFCD70] text-[#FFCD70] hover:text-gray-900 border border-[#FFCD70]">

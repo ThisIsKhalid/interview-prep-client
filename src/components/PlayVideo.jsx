@@ -1,64 +1,59 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { fetchFromAPI } from "../utilities/fetchFromApi";
+import Video from "./Video";
 
 const PlayVideo = () => {
-  const { id } = useParams();
-    console.log(id);
+  const { name } = useParams();
+  // console.log(name);
+  
+  const [items, setItems] = useState([]);
+  const [video, setVideo] = useState(items[0]?.snippet.resourceId.videoId);
+  const [title, setTitle] = useState(items[0]?.snippet.title);
 
-  // const courses = {
-  //   ReactJS: [
-  //     { title: "ReactJS 1", vidId: "QFaFIcGhPoM" },
-  //     { title: "ReactJS 2", vidId: "9hb_0TZ_MVI" },
-  //     { title: "ReactJS 3", vidId: "9VIiLJL0H4Y" },
-  //   ],
-  //   NodeJS: [
-  //     { title: "NodeJS 1", vidId: "LAUi8pPlcUM" },
-  //     { title: "NodeJS 2", vidId: "HXpPKhWOkAs" },
-  //     { title: "NodeJS 3", vidId: "2mWb7j1A3c8" },
-  //   ],
-  // };
+  useEffect(() => {
+    fetchFromAPI(
+      `playlistItems?part=snippet&playlistId=PLNMnAEqLBwmo2aAHG1hT41QCgYV3366gp`
+    ).then((data) => setItems(data.items));
+  }, []);
 
-  // const [video, setVideo] = useState(courses[name][0].vidId);
-  // const [title, setTitle] = useState(courses[name][0].title);
 
-  const changeVideo = (id, title) => {
-    // console.log('click', id, title);
-    // setVideo(id);
-    // setTitle(title);
+  const changeVideo = (newVideo, newTitle) => {
+    // console.log("click", videoId, title);
+    setVideo(newVideo);
+    setTitle(newTitle);
   };
-
-  const renderVideos = () => {
-    return (
-      <div className="">
-        <iframe
-          src={`https://www.youtube.com/embed/${id}?start=19`}
-          title="YouTube video player"
-          className="w-full aspect-video border-2 border-gray-800 rounded-lg"
-        ></iframe>
-        {/* <h3 className="lg:text-4xl text-2xl font-medium mt-5">{title}</h3> */}
-      </div>
-    );
-  };
+  console.log(items[0]?.snippet?.title);
 
   return (
     <section className="py-20">
       <div className="container mx-auto">
         <h1 className="text-center text-3xl text-gray-800 mb-6">
-          {/* Welcome to <span className="font-medium">{name}</span> */}
+          Welcome to <span className="font-medium">{name}</span>
         </h1>
-        <div className=" px-5">
-          <div className="">{renderVideos()}</div>
-          {/* <div>
-            {courses[name].map((item) => (
-              <div
-                key={item.vidId}
-                className="border-2 border-r-4 border-b-4 border-gray-800 shadow-lg mb-5"
-                onClick={() => changeVideo(item.vidId, item.title)}
-              >
-                <p className="lg:text-2xl text-lg p-3 cursor-pointer">{item.title}</p>
-              </div>
-            ))}
-          </div> */}
+        <div className="grid grid-cols-4 gap-10 px-5">
+          <div className="col-span-3">
+            <Video video={video} title={title} />
+          </div>
+          <div>
+            {items.map((item) => {
+              // console.log(item.id);
+              const videoId = item.snippet.resourceId.videoId;
+              const title = item.snippet.title;
+
+              return (
+                <div
+                  key={item.id}
+                  className="border border-r-4 border-b-4 border-gray-800 shadow-lg mb-5 rounded-lg"
+                  onClick={() => changeVideo(videoId, title)}
+                >
+                  <p className=" p-3 cursor-pointer">
+                    {title}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

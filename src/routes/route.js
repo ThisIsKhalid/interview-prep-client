@@ -29,12 +29,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "/course/name",
-        element: <CourseDetails />,
-      },
-      {
-        path: "/module/:id",
         element: <PlayVideo />,
       },
+      // {
+      //   path: "/module/:id",
+      //   element: <PlayVideo />,
+      // },
     ],
   },
 ]);
