@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
         element: <Courses />,
       },
       {
-        path: "/course/name",
+        path: "/course/:id",
         element: <PlayVideo />,
       },
       // {

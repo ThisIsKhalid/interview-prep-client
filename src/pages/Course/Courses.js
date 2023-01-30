@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Course from "../../components/Course";
 
 const Courses = () => {
-  const courses = [
-    { id: 1, title: "Top HTML Interview Question" },
-    { id: 2, title: "Top CSS Interview Question" },
-    { id: 3, title: "Top JavaScript Interview Question" },
-  ];
+
+  const [courses, setCourses] = useState([])
+
+  useEffect(() => {
+    fetch('allCourses.json')
+    .then(res=> res.json())
+    .then(data => setCourses(data))
+  }, []);
+  // console.log(courses);
+
+  // const courses = [
+  //   {
+  //     id: "PLNMnAEqLBwmo2aAHG1hT41QCgYV3366gp",
+  //     title: "Top HTML Interview Question",
+  //   },
+  //   {
+  //     id: "PLNMnAEqLBwmq4cvfIMWE9ZiAmndL5VOIM",
+  //     title: "Top CSS Interview Question",
+  //   },
+  //   {
+  //     id: "PLNMnAEqLBwmodUM0HlExxtYERNS2YARhW",
+  //     title: "Top JavaScript Interview Question",
+  //   },
+  // ];
 
   return (
     <section className="bg-slate-100 py-20 px-5">
