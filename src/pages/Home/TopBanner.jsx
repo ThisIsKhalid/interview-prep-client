@@ -7,8 +7,8 @@ const TopBanner = () => {
   return (
     <section className="top-banner h-full w-full pt-10">
       <div className="container mx-auto">
-        {/* top banner up */}
-        <div className="grid lg:grid-cols-2 items-center px-5 lg:p-0">
+        {/* top banner up-1 */}
+        {/* <div className="grid lg:grid-cols-2 items-center px-5 lg:p-0">
           <div className="lg:text-5xl text-4xl text-center lg:text-left text-gray-900 font-light flex flex-col gap-2">
             <h2 className=" line-through">A Better</h2>
             <h1 className="lg:text-6xl text-5xl font-bold">The Only Way</h1>
@@ -24,6 +24,18 @@ const TopBanner = () => {
               Enroll Now <FiArrowUpRight className="text-xl" />
             </button>
           </div>
+        </div> */}
+
+        {/* top banner up-2 */}
+        <div className="lg:mt-10 lg:text-5xl text-4xl text-gray-900 font-light text-center px-5 lg:p-0">
+          <h1 className="flex flex-col lg:flex-row items-center justify-center gap-3">
+            <span className=" line-through">A Better</span>{" "}
+            <span className="lg:text-6xl text-5xl font-bold">
+              The Only Way{" "}
+            </span>
+            to Preparetion for
+          </h1>
+          <h1 className="font-medium lg:mt-6 mt-3">Front-End Interviews</h1>
         </div>
 
         {/* top banner down */}
