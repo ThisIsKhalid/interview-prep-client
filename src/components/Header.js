@@ -57,10 +57,10 @@ const Header = () => {
             </Link>
             <ul className="items-center hidden ml-auto lg:flex">
               <li>
-                <Link className="text-lg font-medium mr-5">Log In</Link>
+                <Link to='/login' className="text-lg font-medium mr-5">Log In</Link>
               </li>
               <li>
-                <Link className=" text-white bg-black/90 py-3 px-4 rounded-full">
+                <Link to='/signup' className=" text-white bg-black/90 py-3 px-4 rounded-full">
                   Sign Up
                 </Link>
               </li>
