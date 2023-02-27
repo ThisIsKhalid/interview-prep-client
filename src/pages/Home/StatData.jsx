@@ -2,7 +2,7 @@ import React from 'react';
 
 const StatData = () => {
     return (
-      <section className="container mx-auto py-20">
+      <section className="container mx-auto pb-20">
         <div className="grid lg:grid-cols-4 grid-cols-1 gap-10">
           <div className="text-center">
             <h1 className="text-5xl text-gray-800 font-medium">4.5</h1>

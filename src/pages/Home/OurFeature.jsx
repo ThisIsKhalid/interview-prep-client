@@ -17,7 +17,7 @@ const OurFeature = () => {
                   <br />
                   <span className="text-[#FFCD70]">Features</span> For You
                 </h1>
-                <button className="flex items-center gap-2 text-lg font-medium px-4 py-3 rounded-full hover:bg-[#FFCD70] text-[#FFCD70] hover:text-gray-900 border border-[#FFCD70]">
+                <button className="flex items-center gap-2 text-lg font-medium px-4 py-3 rounded-full hover:bg-[#FFCD70] text-[#FFCD70] hover:text-gray-900 border border-[#FFCD70] transition-colors delay-75 duration-300">
                   See All Features <FiArrowUpRight className="text-xl" />
                 </button>
               </div>

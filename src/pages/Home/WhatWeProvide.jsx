@@ -20,7 +20,7 @@ const WhatWeProvide = () => {
                 into In-Depth learning from anywhere.
               </p>
               <div className='flex items-center justify-center lg:justify-start'>
-                <button className="flex items-center gap-2 text-lg font-medium border border-gray-900 px-4 py-3 rounded-full  hover:bg-gray-800 hover:text-[#FFCD70]">
+                <button className="flex items-center gap-2 text-lg font-medium border border-gray-900 px-4 py-3 rounded-full  hover:bg-gray-800 hover:text-[#FFCD70] transition-colors delay-75 duration-300">
                   Enroll Now <FiArrowUpRight className="text-xl" />
                 </button>
               </div>

@@ -1,13 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+
+  const {pathname} = useLocation();
+  console.log(pathname);
+  let bgColor;
+  if(pathname === '/home' || pathname == '/'){
+    bgColor = "bg-[#ffefe7db]";
+  }
+  else {
+    bgColor = "bg-slate-50";
+  }
+
   return (
-    <section className="bg-[#ffefe7db] pt-10">
+    <section className={`pt-10 ${bgColor}`}>
       <div className="container mx-auto bg-gray-800 pt-20 pb-10 md:rounded-t-3xl px-10 text-white">
         <div className="grid lg:grid-cols-5 grid-cols-2  gap-3">
           <div className="col-span-2">
-            <h1 className="text-3xl mb-4 text-[#FFCD70] font-bold">Interview Prep</h1>
+            <h1 className="text-3xl mb-4 text-[#FFCD70] font-bold">
+              Interview Prep
+            </h1>
             <p className="text-gray-400">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Accusamus et corrupti sapiente corporis perferendis natus quaerat

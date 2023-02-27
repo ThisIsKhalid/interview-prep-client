@@ -27,7 +27,7 @@ const Course = ({course}) => {
       </div>
       <h3 className="text-2xl font-medium mb-6 text-white">{title}</h3>
       <Link to={`/course/${id}`}>
-        <button className="text-lg font-medium px-4 py-3 rounded-full hover:bg-[#FFCD70] text-[#FFCD70] hover:text-gray-900 border border-[#FFCD70]">
+        <button className="text-lg font-medium px-4 py-3 rounded-full hover:bg-[#FFCD70] text-[#FFCD70] hover:text-gray-900 border border-[#FFCD70] transition-colors delay-75 duration-300">
           View Course
         </button>
       </Link>

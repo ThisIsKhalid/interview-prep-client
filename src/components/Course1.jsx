@@ -26,7 +26,7 @@ const Course1 = () => {
       <h3 className="text-2xl font-medium mb-6">
         Top JavaScript Interview Question
       </h3>
-      <button className="text-lg font-medium border border-gray-900 px-4 py-3 rounded-full  hover:bg-gray-800 hover:text-[#FFCD70]">
+      <button className="text-lg font-medium border border-gray-900 px-4 py-3 rounded-full  hover:bg-gray-800 hover:text-[#FFCD70] transition-colors delay-75 duration-300">
         View Course
       </button>
     </div>

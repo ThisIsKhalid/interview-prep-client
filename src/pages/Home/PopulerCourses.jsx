@@ -1,5 +1,5 @@
 import React from "react";
-import Course from "../../components/Course1";
+import Course1 from "../../components/Course1";
 
 const PopulerCourses = () => {
   return (
@@ -14,9 +14,9 @@ const PopulerCourses = () => {
 
         {/* courses */}
         <div className="grid lg:grid-cols-3 grid-cols-1 items-center gap-10">
-          <Course />
-          <Course />
-          <Course />
+          <Course1 />
+          <Course1 />
+          <Course1 />
         </div>
       </div>
     </section>
