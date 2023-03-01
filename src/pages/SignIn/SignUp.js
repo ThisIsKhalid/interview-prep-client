@@ -5,7 +5,7 @@ import signupImg from '../../assets/images/Sign up-bro.svg'
 
 const SignUp = () => {
     return (
-      <div className="flex lg:flex-row flex-col items-center justify-evenly py-10 mx-5 md:mx-0">
+      <div className="flex lg:flex-row flex-col items-center justify-evenly py-20 mx-5 md:mx-0">
         <div className="lg:w-1/2 md:w-3/4 w-full">
           <img className="w-3/4 mx-auto" src={signupImg} alt="" />
         </div>
@@ -65,7 +65,7 @@ const SignUp = () => {
                 className="w-full px-4 py-3 rounded-md text-gray-800 text-lg"
               />
             </div>
-            <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400 hover:bg-violet-600">
+            <button className="block w-full p-3 text-center rounded-md text-gray-900 hover:text-[#FFCD70] hover:bg-gray-800 bg-[#FFCD70] uppercase font-medium transition-colors delay-75 duration-300">
               Sign UP
             </button>
           </form>
