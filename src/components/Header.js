@@ -27,7 +27,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className="text-lg font-medium">Blog</NavLink>
+                <NavLink to='/blogs' className="text-lg font-medium">Blogs</NavLink>
               </li>
               <li>
                 <NavLink to="/course" className="text-lg font-medium">

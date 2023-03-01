@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import CourseDetails from "../components/CourseDetails";
 import PlayVideo from "../components/PlayVideo";
 import MainLayout from "../layout/MainLayout";
-import Blog from "../pages/Blog/Blog";
+import Blogs from "../pages/Blog/Blogs";
 import Courses from "../pages/Course/Courses";
 import Home from "../pages/Home/Home";
 import LogIn from "../pages/SignIn/LogIn";
@@ -22,8 +22,8 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/blog",
-        element: <Blog />,
+        path: "/blogs",
+        element: <Blogs />,
       },
       {
         path: "/course",
