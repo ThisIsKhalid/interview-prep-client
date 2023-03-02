@@ -4,7 +4,7 @@ import { FiClock } from "react-icons/fi";
 
 const Course1 = () => {
   return (
-    <div className="h-full p-5 bg-white shadow-lg rounded-lg">
+    <div className="h-full p-5 bg-gray-50 shadow-lg rounded-lg">
       <div className="mb-6">
         <img
           className="w-full"
