@@ -26,7 +26,7 @@ const TopBanner = () => {
           </div> */}
           <div className="flex flex-col items-center justify-center mt-14 px-5">
             <input
-              className="lg:w-1/2 w-full bg-gray-100 py-3 px-5 rounded-md text-lg focus:outline-none focus:bg-gray-800 text-gray-900 font-medium focus:text-[#FFCD70] transition-colors duration-300 placeholder:text-gray-400 placeholder:font-medium placeholder:text-center text-center focus:placeholder:text-transparent"
+              className="lg:w-1/2 w-full bg-gray-100 py-3 px-5 rounded-md text-lg focus:outline-none focus:bg-gray-700 text-gray-900 font-medium focus:text-[#FFCD70] transition-colors duration-300 placeholder:text-gray-400 placeholder:font-medium placeholder:text-center text-center focus:placeholder:text-transparent"
               type="email"
               required
               placeholder="example@gmail.com"
