@@ -85,13 +85,32 @@ const Blogs = () => {
             <FiSearch className="absolute top-3 right-[23%] text-gray-900 text-lg" />
           </button>
         </div>
-        <button className="bg-[#FFCD70] md:py-2 px-5 md:text-base text-sm rounded-lg font-medium text-gray-900">
+        <label
+          htmlFor="my-modal-5"
+          className="btn bg-[#FFCD70] hover:bg-[#FFCD70] md:py-2 px-5 md:text-base text-sm rounded-lg font-medium text-gray-900"
+        >
           Create Blog
-        </button>
+        </label>
       </div>
       <div className="py-10 px-5 bg-gray-50">
         {/* -------------text editor---------------- */}
-        <div className="h-96 w-full bg-[#FFCD70] mb-5"></div>
+        <input type="checkbox" id="my-modal-5" className="modal-toggle" />
+        <div className="modal">
+          <div className="modal-box w-11/12 max-w-5xl">
+            <h3 className="font-bold text-lg">
+              Congratulations random Internet user!
+            </h3>
+            <p className="py-4">
+              You've been selected for a chance to get one year of subscription
+              to use Wikipedia for free!
+            </p>
+            <div className="modal-action">
+              <label htmlFor="my-modal-5" className="btn">
+                Yay!
+              </label>
+            </div>
+          </div>
+        </div>
 
         {/* --------------blogs---------------- */}
         <h2 className="text-2xl font-medium text-gray-800 border-b border-gray-400 mb-5">
