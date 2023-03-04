@@ -98,7 +98,7 @@ const Blogs = () => {
         <div className="modal">
           <div className="modal-box w-11/12 max-w-5xl">
             <h3 className="font-bold text-lg">
-              Congratulations random Internet user!
+              Congratulations
             </h3>
             <p className="py-4">
               You've been selected for a chance to get one year of subscription
