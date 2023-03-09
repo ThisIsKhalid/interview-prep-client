@@ -1,19 +1,29 @@
-import { useState } from "react";
-import { FiMenu } from "react-icons/fi";
+import { useContext, useState } from "react";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { CiLogin } from "react-icons/ci";
+import { FiMenu } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 // import component
-import Drawer from 'react-modern-drawer'
+import Drawer from "react-modern-drawer";
 //import styles
-import 'react-modern-drawer/dist/index.css'
+import { toast } from "react-hot-toast";
+import "react-modern-drawer/dist/index.css";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const Header = () => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, userSignout } = useContext(AuthContext);
 
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleDrawer = () => {
-      setIsOpen((prevState) => !prevState);
-    };
+  const handleSignOut = () => {
+    userSignout()
+      .then(() => toast.success("Successfully sign out!"))
+      .catch((err) => toast.error(err.massage));
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
+  };
 
   return (
     <>
@@ -27,7 +37,9 @@ const Header = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/blogs' className="text-lg font-medium">Blogs</NavLink>
+                <NavLink to="/blogs" className="text-lg font-medium">
+                  Blogs
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/course" className="text-lg font-medium">
@@ -36,38 +48,56 @@ const Header = () => {
               </li>
             </ul>
             <Link to="/" className="inline-flex items-center lg:mx-auto">
-              <svg
-                className="w-8 text-deep-purple-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
               <span className="ml-2 text-3xl font-bold text-gray-900">
                 Interview Prep
               </span>
             </Link>
             <ul className="items-center hidden ml-auto lg:flex">
-              <li>
-                <Link to='/login' className="text-lg font-medium mr-5">Log In</Link>
-              </li>
-              <li>
-                <Link to='/signup' className=" text-white bg-black/90 py-3 px-4 rounded-full">
-                  Sign Up
-                </Link>
-              </li>
+              {user?.email ? (
+                <>
+                  <li>
+                    <div className="dropdown dropdown-bottom dropdown-end">
+                      <label tabIndex={0} className="">
+                        <BsThreeDotsVertical className="text-2xl text-gray-900" />
+                      </label>
+                      <ul
+                        tabIndex={0}
+                        className="dropdown-content menu p-2 mt-2 mr-2 shadow bg-gray-800 text-[#FFCD70] rounded w-40"
+                      >
+                        <li>
+                          <Link>Profile</Link>
+                        </li>
+                        <li>
+                          <Link>Dashboard</Link>
+                        </li>
+                        <li onClick={handleSignOut}>
+                          <button>Log Out</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/login" className="text-lg font-medium mr-5">
+                      Log In
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/signup"
+                      className=" text-white bg-black/90 py-3 px-4 rounded-full"
+                    >
+                      Sign Up
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
             <div className="ml-auto lg:hidden">
               <button onClick={toggleDrawer}>
-                <FiMenu className="text-2xl text-gray-800" />
+                <FiMenu className="text-2xl font-medium text-gray-800" />
               </button>
               <Drawer
                 open={isOpen}
@@ -80,13 +110,19 @@ const Header = () => {
                   <div className="ml-5">
                     <CiLogin
                       onClick={toggleDrawer}
-                      className="text-[#FFCD70] text-2xl"
+                      className="text-gray-100 text-2xl"
                     />
                   </div>
-                  <div className="flex flex-col items-end gap-2">
-                    <NavLink className="text-white">Home</NavLink>
-                    <NavLink className="text-white">Blog</NavLink>
-                    <NavLink className="text-white">Course</NavLink>
+                  <div className="flex flex-col items-end gap-2 text-[#FFCD70]">
+                    <NavLink to="/home" onClick={toggleDrawer} className="">
+                      Home
+                    </NavLink>
+                    <NavLink to="/blogs" onClick={toggleDrawer} className="">
+                      Blog
+                    </NavLink>
+                    <NavLink to="/course" onClick={toggleDrawer} className="">
+                      Course
+                    </NavLink>
                   </div>
                 </div>
               </Drawer>

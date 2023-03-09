@@ -4,7 +4,7 @@ import weProvideImg from '../../assets/images/weProvide.png'
 
 const WhatWeProvide = () => {
     return (
-      <section className="we-provide">
+      <section className="we-provide py-2">
         <div className="container mx-auto pb-10 lg:pb-0">
           <div className="grid lg:grid-cols-2 items-center px-5 lg:px-0">
             <div>

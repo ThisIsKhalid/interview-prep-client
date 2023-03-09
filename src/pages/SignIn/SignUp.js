@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa'
 import signupImg from '../../assets/images/Sign up-bro.svg'
+import { AuthContext } from '../../Context/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const SignUp = () => {
+  const { register } = useContext(AuthContext);
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const photoURL = form.photoURL.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    // console.log(name, photoURL, email, password);
+    register(email, password)
+      .then((data) => {
+        console.log(data.user);
+        toast.success("Successfully registered!");
+        form.reset();
+      })
+      .catch((error) => {
+        if(error){
+
+          toast.error(error.message);
+        }
+      });
+
+  }
+
     return (
       <div className="flex lg:flex-row flex-col items-center justify-evenly py-20 mx-5 md:mx-0">
         <div className="lg:w-1/2 md:w-3/4 w-full">
@@ -12,7 +40,7 @@ const SignUp = () => {
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 shadow-lg mt-5 border border-gray-200 mx-auto">
           <h1 className="text-2xl font-bold text-center">Sign UP</h1>
           <form
-            // onSubmit={handleSignUp}
+            onSubmit={handleSignUp}
             className="space-y-6 ng-untouched ng-pristine ng-valid"
           >
             <div className="space-y-1">

@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Footer = () => {
 
   const {pathname} = useLocation();
-  console.log(pathname);
+  // console.log(pathname);
   let bgColor;
   if(pathname === '/home' || pathname == '/'){
     bgColor = "bg-[#ffefe7db]";
