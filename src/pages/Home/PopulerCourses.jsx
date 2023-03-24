@@ -1,7 +1,16 @@
 import React from "react";
-import Course1 from "../../components/Course1";
+import { useEffect } from "react";
+import { useState } from "react";
+import Course from "../../components/Course";
 
 const PopulerCourses = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch("allCourses.json")
+      .then((res) => res.json())
+      .then((data) => setCourses(data));
+  }, []);
   return (
     <section className="bg-gray-800 py-20 px-5">
       <div className="container mx-auto">
@@ -14,9 +23,9 @@ const PopulerCourses = () => {
 
         {/* courses */}
         <div className="grid lg:grid-cols-3 grid-cols-1 items-center gap-10">
-          <Course1 />
-          <Course1 />
-          <Course1 />
+          {courses.map((course) => (
+            <Course key={course.id} course={course} />
+          ))}
         </div>
       </div>
     </section>

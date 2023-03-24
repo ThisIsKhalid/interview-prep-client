@@ -34,3 +34,10 @@ body {
 .we-provide, .mobileApp {
   background-color: var(--color-second);
 }
+
+.bg-courses {
+  background-image: url(./assets/images/breadcumb-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

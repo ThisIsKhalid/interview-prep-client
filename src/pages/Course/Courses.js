@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import Course from "../../components/Course";
 
 const Courses = () => {
-
-  const [courses, setCourses] = useState([])
+  const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch('allCourses.json')
-    .then(res=> res.json())
-    .then(data => setCourses(data))
+    fetch("allCourses.json")
+      .then((res) => res.json())
+      .then((data) => setCourses(data));
   }, []);
   // console.log(courses);
 
@@ -28,8 +27,13 @@ const Courses = () => {
   // ];
 
   return (
-    <section className="bg-slate-50 py-20 px-5">
-      <div className="container mx-auto">
+    <section className="bg-slate-50 pb-20 ">
+      <div className="bg-courses h-72 flex items-center justify-center mb-16">
+        <div className="">
+          <h1 className="text-4xl font-semibold text-gray-50 ">OUR COURSES</h1>
+        </div>
+      </div>
+      <div className="container mx-auto px-5">
         <div className="grid lg:grid-cols-3 grid-cols-1 items-center gap-10">
           {courses.map((course) => (
             <Course key={course.id} course={course} />
