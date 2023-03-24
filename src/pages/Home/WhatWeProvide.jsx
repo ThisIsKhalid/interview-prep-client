@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import weProvideImg from '../../assets/images/weProvide.png'
 
 const WhatWeProvide = () => {
@@ -19,10 +20,12 @@ const WhatWeProvide = () => {
                 with Mentors, Relevent Resources, and Tools that help you dive
                 into In-Depth learning from anywhere.
               </p>
-              <div className='flex items-center justify-center lg:justify-start'>
-                <button className="flex items-center gap-2 text-lg font-medium border border-gray-900 px-4 py-3 rounded-full  hover:bg-gray-800 hover:text-[#FFCD70] transition-colors delay-75 duration-300">
-                  Enroll Now <FiArrowUpRight className="text-xl" />
-                </button>
+              <div className="flex items-center justify-center lg:justify-start">
+                <Link to="/signup">
+                  <button className="flex items-center gap-2 text-lg font-medium border border-gray-900 px-4 py-3 rounded-full  hover:bg-gray-800 hover:text-[#FFCD70] transition-colors delay-75 duration-300">
+                    Join Now <FiArrowUpRight className="text-xl" />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
