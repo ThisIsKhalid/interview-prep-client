@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchFromAPI } from "../utilities/fetchFromApi";
 import Video from "./Video";
 import { FiSearch } from "react-icons/fi";
+import Breadcrumbs from "./Breadcrumbs";
 
 const PlayVideo = () => {
   const { id } = useParams();
@@ -38,6 +39,7 @@ const PlayVideo = () => {
       <div className="container mx-auto">
         <div className="mb-10">
           <h1 className="text-4xl font-medium text-gray-900 mb-3">{title}</h1>
+          <Breadcrumbs/>
           <p className="text-lg">{description}</p>
         </div>
         <div className="grid lg:grid-cols-4 grid-cols-1 gap-10 px-5">

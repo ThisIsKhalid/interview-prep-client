@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsFillGrid3X3GapFill, BsList } from "react-icons/bs";
 import { FaListUl } from "react-icons/fa";
+import Breadcrumbs from "../../components/Breadcrumbs";
 import Course from "../../components/Course";
 
 const Courses = () => {
@@ -33,6 +34,7 @@ const Courses = () => {
       <div className="bg-courses h-72 flex items-center justify-center mb-16">
         <div className="">
           <h1 className="text-4xl font-semibold text-gray-50 ">OUR COURSES</h1>
+          <Breadcrumbs/>
         </div>
       </div>
       <div className="container mx-auto px-5">
