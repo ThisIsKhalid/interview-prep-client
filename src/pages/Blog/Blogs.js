@@ -1,5 +1,6 @@
 import React from "react";
 import {FiSearch} from 'react-icons/fi'
+import Breadcrumbs from "../../components/Breadcrumbs";
 import BlogCard from "./BlogCard";
 
 const Blogs = () => {
@@ -72,34 +73,40 @@ const Blogs = () => {
 
   return (
     <>
-      {/* search nav */}
-      <div className="bg-gray-700 py-4 flex items-center justify-between px-5">
-        <div className="lg:w-1/2 w-full relative">
-          <input
-            type="text"
-            className="w-4/5 py-2 rounded-lg px-7 focus:outline-[#FFCD70] focus:outline-double focus:outline-2 bg-gray-200 text-gray-900 font-medium"
-            placeholder="search title"
-          />
-          <div className="w-14 bg-[#FFCD70] h-10 absolute top-0 right-[20%] rounded-r-lg"></div>
-          <button>
-            <FiSearch className="absolute top-3 right-[23%] text-gray-900 text-lg" />
-          </button>
+      {/* breadcrumb and banner */}
+      <div className="bg-courses h-72 flex items-center justify-center relative">
+        <div className="">
+          <h1 className="text-4xl font-semibold text-gray-50 ">OUR BLOGS</h1>
+          <Breadcrumbs />
         </div>
-        <label
-          htmlFor="my-modal-5"
-          className="btn bg-[#FFCD70] hover:bg-[#FFCD70] md:py-2 px-5 md:text-base text-sm rounded-lg font-medium text-gray-900"
-        >
-          Create Blog
-        </label>
+        {/* search nav */}
+        <div className=" flex items-center justify-between px-5 absolute bottom-0 left-0 w-full ">
+          <div className="lg:w-1/2 w-full relative">
+            <input
+              type="text"
+              className="w-4/5 py-2 rounded-lg px-7 focus:outline-[#FFCD70] focus:outline-double focus:outline-2 bg-gray-200 text-gray-900 font-medium"
+              placeholder="search title"
+            />
+            <div className="w-14 bg-[#FFCD70] h-10 absolute top-0 right-[20%] rounded-r-lg"></div>
+            <button>
+              <FiSearch className="absolute top-3 right-[23%] text-gray-900 text-lg" />
+            </button>
+          </div>
+          <label
+            htmlFor="my-modal-5"
+            className="btn bg-[#FFCD70] hover:bg-[#FFCD70] md:py-2 px-5 md:text-base text-sm rounded-lg font-medium text-gray-900"
+          >
+            Create Blog
+          </label>
+        </div>
       </div>
+
       <div className="py-10 px-5 bg-gray-50">
         {/* -------------text editor---------------- */}
         <input type="checkbox" id="my-modal-5" className="modal-toggle" />
         <div className="modal">
           <div className="modal-box w-11/12 max-w-5xl">
-            <h3 className="font-bold text-lg">
-              Congratulations
-            </h3>
+            <h3 className="font-bold text-lg">Congratulations</h3>
             <p className="py-4">
               You've been selected for a chance to get one year of subscription
               to use Wikipedia for free!
