@@ -41,6 +41,12 @@ body {
   background-size: cover;
   background-position: center;
 }
+.bg-blogs {
+  background-image: url(./assets/images/Blog-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 
 

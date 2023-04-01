@@ -97,10 +97,3 @@
     transform: scaleX(0);
   }
 }
-
-h2 {
-  position: absolute;
-  bottom: 100px;
-  right: 40%;
-  left: 40%;
-}

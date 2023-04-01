@@ -74,24 +74,14 @@ const Blogs = () => {
   return (
     <>
       {/* breadcrumb and banner */}
-      <div className="bg-courses h-72 flex items-center justify-center relative">
-        <div className="">
-          <h1 className="text-4xl font-semibold text-gray-50 ">OUR BLOGS</h1>
+      <div className="bg-blogs h-72 flex items-center justify-center relative">
+        <div className="absolute top-0 left-0 h-full w-full bg-black/60"></div>
+        <div className="z-50">
+          <h1 className="text-4xl font-semibold text-gray-50">OUR BLOGS</h1>
           <Breadcrumbs />
         </div>
-        {/* search nav */}
-        <div className=" flex items-center justify-between px-5 absolute bottom-0 left-0 w-full ">
-          <div className="lg:w-1/2 w-full relative">
-            <input
-              type="text"
-              className="w-4/5 py-2 rounded-lg px-7 focus:outline-[#FFCD70] focus:outline-double focus:outline-2 bg-gray-200 text-gray-900 font-medium"
-              placeholder="search title"
-            />
-            <div className="w-14 bg-[#FFCD70] h-10 absolute top-0 right-[20%] rounded-r-lg"></div>
-            <button>
-              <FiSearch className="absolute top-3 right-[23%] text-gray-900 text-lg" />
-            </button>
-          </div>
+        {/* create blog */}
+        <div className=" flex justify-end px-5 absolute bottom-0 left-0 w-full ">
           <label
             htmlFor="my-modal-5"
             className="btn bg-[#FFCD70] hover:bg-[#FFCD70] md:py-2 px-5 md:text-base text-sm rounded-lg font-medium text-gray-900"
@@ -120,9 +110,24 @@ const Blogs = () => {
         </div>
 
         {/* --------------blogs---------------- */}
-        <h2 className="text-2xl font-medium text-gray-800 border-b border-gray-400 mb-5">
-          Latest Blogs
-        </h2>
+        <div className="border-b border-gray-400 mb-5 pb-5 flex items-center justify-between">
+          <h2 className="text-2xl font-medium text-gray-800 ">Latest Blogs</h2>
+
+          {/* search bar */}
+          <div className="lg:w-1/2 w-full relative flex justify-end ">
+            <input
+              type="text"
+              className="w-4/5 py-2 rounded-lg px-7 focus:outline-[#FFCD70] focus:outline-double focus:outline-2 bg-gray-200 text-gray-900 font-medium"
+              placeholder="search title"
+            />
+            <div className="w-14 bg-[#FFCD70] h-10 absolute top-0 right-0 rounded-r-lg"></div>
+            <button>
+              <FiSearch className="absolute top-3 right-4 text-gray-900 text-lg" />
+            </button>
+          </div>
+        </div>
+
+        {/* --------------posts---------------- */}
         <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
           {blogPosts?.map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
