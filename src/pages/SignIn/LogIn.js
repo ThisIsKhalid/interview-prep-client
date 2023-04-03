@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { toast } from "react-hot-toast";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import signinImg from "../../assets/images/Sign in.svg";
 import { AuthContext } from "../../Context/AuthProvider";
 
 const LogIn = () => {
   const { userLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignin = (event) => {
     event.preventDefault();
@@ -14,11 +15,12 @@ const LogIn = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
+    // console.log(email, password);
     userLogin(email, password)
     .then(res => {
-      console.log(res.user);
+      // console.log(res.user);
       toast.success('Login successfull!')
+      navigate('/')
       form.reset();
     })
     .catch(err => {

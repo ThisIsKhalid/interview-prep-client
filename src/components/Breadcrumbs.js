@@ -7,12 +7,9 @@ const Breadcrumbs = () => {
 
   let currentLink = "";
 
-  const crumbs = location.pathname
-    .split("/")
-    .filter((cmb) => cmb !== "")
+  const crumbs = location.pathname.split("/").filter((cmb) => cmb !== "");
   console.log(crumbs);
 
-  
   return (
     <div className="breadcrumbs text-xl font-medium capitalize text-[#FFCD70]">
       <Link to="/">
