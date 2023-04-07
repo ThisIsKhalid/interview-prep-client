@@ -14,7 +14,7 @@ const CourseDetails = () => {
 
   return (
     <section className="bg-slate-50 py-20 px-5">
-      <div className="container mx-auto flex flex-col md:flex-row items-start justify-between">
+      <div className="container mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
         {/* -----------left side --------------*/}
         <div className="flex flex-col w-full md:w-1/2">
           {/* instructor  */}
@@ -178,7 +178,23 @@ const CourseDetails = () => {
           )}
         </div>
         {/* --------------right side------------------ */}
-        <div className="w-1/2"></div>
+        <div className=" w-full md:w-1/2 md:px-10 ">
+          <div className="bg-white shadow-lg pb-1 rounded-lg">
+            <div className="mb-6 rounded-t-lg overflow-hidden">
+              <img
+                className="w-full rounded-t-lg hover:scale-110 transition delay-75 ease-in-out duration-300"
+                src="https://img.freepik.com/free-photo/online-web-design_53876-95309.jpg?w=740&t=st=1679673236~exp=1679673836~hmac=81540700e69c55112d0a0bbf024d5c56182a9511a161d80167ae2c959a1e3824"
+                alt=""
+              />
+            </div>
+            <h1 className="text-center text-4xl text-gray-800 font-medium">
+              $69.00
+            </h1>
+            <button className="bg-[#fe6858fa] hover:bg-[#ff5b4a] transition-colors w-[85%] py-5 rounded-lg my-5 block mx-auto font-medium text-white text-lg">
+              Buy Now
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
