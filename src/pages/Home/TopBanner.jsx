@@ -1,7 +1,7 @@
+import Lottie from "lottie-react";
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import onlinePrep from "../../assets/images/onlinePrep.json";
-import Lottie from "lottie-react";
 
 const TopBanner = () => {
   return (

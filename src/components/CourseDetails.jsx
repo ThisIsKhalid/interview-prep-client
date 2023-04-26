@@ -7,6 +7,8 @@ import {
   BsPuzzle,
 } from "react-icons/bs";
 import { IoDocumentsOutline } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const CourseDetails = () => {
   const [content, setContent] = useState("Overview");
@@ -35,7 +37,7 @@ const CourseDetails = () => {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <IoDocumentsOutline className="text-6xl text-[#ff5b4a]" />
+              <IoDocumentsOutline className="text-6xl text-[#ffbb3c]" />
               <div>
                 <h4 className="text-base text-gray-500 uppercase">Category</h4>
                 <h1 className="text-xl text-gray-800 font-medium">
@@ -51,23 +53,23 @@ const CourseDetails = () => {
             </h1>
             <div className="flex flex-row flex-wrap gap-5 mt-3 text-gray-800 font-medium">
               <div className="flex gap-2">
-                <BsClock className="text-2xl text-[#ff5b4a]" />
+                <BsClock className="text-2xl text-[#ffa600]" />
                 <p className="text-lg">6 weeks</p>
               </div>
               <div className="flex gap-2">
-                <BsBarChart className="text-2xl text-[#ff5b4a]" />
+                <BsBarChart className="text-2xl text-[#ffa600]" />
                 <p className="text-lg">all levels</p>
               </div>
               <div className="flex gap-2">
-                <BsFillJournalBookmarkFill className="text-2xl text-[#ff5b4a]" />
+                <BsFillJournalBookmarkFill className="text-2xl text-[#ffa600]" />
                 <p className="text-lg">3 lessons</p>
               </div>
               <div className="flex gap-2">
-                <BsPuzzle className="text-2xl text-[#ff5b4a]" />
+                <BsPuzzle className="text-2xl text-[#ffa600]" />
                 <p className="text-lg">1 quiz</p>
               </div>
               <div className="flex gap-2">
-                <BsPeople className="text-2xl text-[#ff5b4a]" />
+                <BsPeople className="text-2xl text-[#ffa600]" />
                 <p className="text-lg">21 students</p>
               </div>
             </div>
@@ -83,7 +85,7 @@ const CourseDetails = () => {
               }}
               className={`h-12 flex items-center justify-center  w-full ${
                 content === "Overview"
-                  ? "border-t-[3px] border-t-[#ff5b4a] bg-white"
+                  ? "border-t-[3px] border-t-[#ffa600] bg-white"
                   : "border-r border-gray-400 bg-slate-200"
               }`}
             >
@@ -95,7 +97,7 @@ const CourseDetails = () => {
               }}
               className={`h-12 flex items-center justify-center  w-full ${
                 content === "Curriculum"
-                  ? "border-t-[3px] border-t-[#ff5b4a] bg-white"
+                  ? "border-t-[3px] border-t-[#ffa600] bg-white"
                   : "border-r border-gray-400 bg-slate-200"
               }`}
             >
@@ -107,7 +109,7 @@ const CourseDetails = () => {
               }}
               className={`h-12 flex items-center justify-center w-full ${
                 content === "Instructor"
-                  ? "border-t-[3px] border-t-[#ff5b4a] bg-white"
+                  ? "border-t-[3px] border-t-[#ffa600] bg-white"
                   : "border-r border-gray-400 bg-slate-200"
               }`}
             >
@@ -190,9 +192,16 @@ const CourseDetails = () => {
             <h1 className="text-center text-4xl text-gray-800 font-medium">
               $69.00
             </h1>
-            <button className="bg-[#fe6858fa] hover:bg-[#ff5b4a] transition-colors w-[85%] py-5 rounded-lg my-5 block mx-auto font-medium text-white text-lg">
-              Buy Now
-            </button>
+
+            <Link className="w-full flex justify-center">
+              <button class="my-5 relative inline-flex items-center px-12 py-3 overflow-hidden text-xl font-medium text-gray-900 border-2 border-gray-900 rounded-full hover:text-white group hover:bg-gray-50 w-[85%]">
+                <span class="absolute left-0 block w-full h-0 transition-all bg-gray-900 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                  <BsArrowRight className="text-2xl"/>
+                </span>
+                <span class="relative mx-auto">Buy Now</span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
