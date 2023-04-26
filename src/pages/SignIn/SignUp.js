@@ -4,6 +4,7 @@ import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa'
 import signupImg from '../../assets/images/Sign up-bro.svg'
 import { AuthContext } from '../../Context/AuthProvider';
 import { toast } from 'react-hot-toast';
+import Button1 from '../../components/buttons/Button_1';
 
 const SignUp = () => {
   const { register } = useContext(AuthContext);
@@ -19,7 +20,7 @@ const SignUp = () => {
     // console.log(name, photoURL, email, password);
     register(email, password)
       .then((data) => {
-        console.log(data.user);
+        // console.log(data.user);
         toast.success("Successfully registered!");
         form.reset();
       })
@@ -37,7 +38,7 @@ const SignUp = () => {
         <div className="lg:w-1/2 md:w-3/4 w-full">
           <img className="w-3/4 mx-auto" src={signupImg} alt="" />
         </div>
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 shadow-lg mt-5 border border-gray-200 mx-auto">
+        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-100 shadow-lg mt-5 border border-gray-200 mx-auto">
           <h1 className="text-2xl font-bold text-center">Sign UP</h1>
           <form
             onSubmit={handleSignUp}
@@ -48,11 +49,12 @@ const SignUp = () => {
                 Username
               </label>
               <input
+              required
                 type="text"
                 name="name"
                 id="username"
                 placeholder="Your Name"
-                className="w-full px-4 py-3 rounded-md text-gray-800 text-lg "
+                className="w-full px-4 py-3 rounded-md text-gray-800 border border-gray-700 bg-gray-50"
               />
             </div>
             <div className="space-y-1">
@@ -60,11 +62,11 @@ const SignUp = () => {
                 Photo URL
               </label>
               <input
-                type="photo"
+                type="file"
+                accept=".png, .jpg, .jpeg"
                 name="photoURL"
                 id="photo"
-                placeholder="Your Photo url"
-                className="w-full px-4 py-3 rounded-md text-gray-800 text-lg "
+                className="file-input file-input-bordered w-full"
               />
             </div>
             <div className="space-y-1">
@@ -77,7 +79,7 @@ const SignUp = () => {
                 name="email"
                 id="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-3 rounded-md text-gray-800 text-lg"
+                className="w-full px-4 py-3 rounded-md text-gray-800 border border-gray-700 bg-gray-50"
               />
             </div>
             <div className="space-y-1">
@@ -90,12 +92,13 @@ const SignUp = () => {
                 name="password"
                 id="password"
                 placeholder="Password"
-                className="w-full px-4 py-3 rounded-md text-gray-800 text-lg"
+                className="w-full px-4 py-3 rounded-md text-gray-800  border border-gray-700 bg-gray-50"
               />
             </div>
-            <button className="block w-full p-3 text-center rounded-md text-gray-900 hover:text-[#FFCD70] hover:bg-gray-800 bg-[#FFCD70] uppercase font-medium transition-colors delay-75 duration-300">
+            {/* <button className="block w-full p-3 text-center rounded-md text-gray-900 hover:text-[#FFCD70] hover:bg-gray-800 bg-[#FFCD70] uppercase font-medium transition-colors delay-75 duration-300">
               Sign UP
-            </button>
+            </button> */}
+            <Button1 className="w-full" text="Sign Up" />
           </form>
           <div className="flex items-center pt-4 space-x-1">
             <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>

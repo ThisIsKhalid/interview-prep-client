@@ -1,7 +1,9 @@
 import Lottie from "lottie-react";
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import onlinePrep from "../../assets/images/onlinePrep.json";
+import Button1 from "../../components/buttons/Button_1";
 
 const TopBanner = () => {
   return (
@@ -25,15 +27,15 @@ const TopBanner = () => {
             <Lottie animationData={onlinePrep} loop={true} />
           </div> */}
           <div className="flex flex-col items-center justify-center mt-14 px-5">
-            <input
+            {/* <input
               className="lg:w-1/2 w-full bg-[#FFCD70] border-2 border-gray-800 py-3 px-5 rounded-md text-base focus:outline-none focus:bg-gray-800 text-gray-900 font-medium focus:text-[#FFCD70] transition-colors duration-300 placeholder:text-gray-700 placeholder:font-medium placeholder:text-center text-center focus:placeholder:text-transparent"
               type="email"
               required
               placeholder="example@gmail.com"
-            />
-            <button className="lg:w-1/2 w-full flex items-center justify-center gap-2 lg:text-lg text-base font-semibold border-2 border-gray-800 px-4 py-3 rounded-md  hover:bg-gray-800 hover:text-[#FFCD70] transition-colors delay-75 duration-300 uppercase mt-5">
-              Join Now to get free access <FiArrowUpRight className="text-xl" />
-            </button>
+            /> */}
+            <Link to="/signup" className="lg:w-1/2 w-full">
+              <Button1 className=" w-full" text="Join Now to get free access" />
+            </Link>
           </div>
         </div>
       </section>

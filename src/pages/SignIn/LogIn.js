@@ -4,6 +4,7 @@ import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import signinImg from "../../assets/images/Sign in.svg";
 import { AuthContext } from "../../Context/AuthProvider";
+import Button1 from "../../components/buttons/Button_1";
 
 const LogIn = () => {
   const { userLogin } = useContext(AuthContext);
@@ -34,7 +35,7 @@ const LogIn = () => {
       <div className="lg:w-1/2 md:w-3/4 w-full">
         <img className="w-3/4 mx-auto" src={signinImg} alt="" />
       </div>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 shadow-lg mt-5 border border-gray-200 mx-auto">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-100 shadow-lg mt-5 border border-gray-200 mx-auto">
         <h1 className="text-2xl font-bold text-center">Sign IN</h1>
         <form
           onSubmit={handleSignin}
@@ -50,7 +51,7 @@ const LogIn = () => {
               name="email"
               id="email"
               placeholder="Your Email"
-              className="w-full px-4 py-3 rounded-md text-gray-800 text-lg "
+              className="w-full px-4 py-3 rounded-md text-gray-800 border border-gray-700 bg-gray-50 "
             />
           </div>
           <div className="space-y-1">
@@ -63,12 +64,13 @@ const LogIn = () => {
               name="password"
               id="password"
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-md text-gray-800 text-lg"
+              className="w-full px-4 py-3 rounded-md text-gray-800 border border-gray-700 bg-gray-50"
             />
           </div>
-          <button className="block w-full p-3 text-center rounded-md text-gray-900 hover:text-[#FFCD70] hover:bg-gray-800 bg-[#FFCD70] uppercase font-medium transition-colors delay-75 duration-300">
+          {/* <button className="block w-full p-3 text-center rounded-md text-gray-900 hover:text-[#FFCD70] hover:bg-gray-800 bg-[#FFCD70] uppercase font-medium transition-colors delay-75 duration-300">
             Sign IN
-          </button>
+          </button> */}
+          <Button1 className="w-full" text="Sign In" />
         </form>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
