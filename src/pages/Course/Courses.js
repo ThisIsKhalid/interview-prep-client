@@ -12,22 +12,6 @@ const Courses = () => {
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
-  // console.log(courses);
-
-  // const courses = [
-  //   {
-  //     id: "PLNMnAEqLBwmo2aAHG1hT41QCgYV3366gp",
-  //     title: "Top HTML Interview Question",
-  //   },
-  //   {
-  //     id: "PLNMnAEqLBwmq4cvfIMWE9ZiAmndL5VOIM",
-  //     title: "Top CSS Interview Question",
-  //   },
-  //   {
-  //     id: "PLNMnAEqLBwmodUM0HlExxtYERNS2YARhW",
-  //     title: "Top JavaScript Interview Question",
-  //   },
-  // ];
 
   return (
     <section className="bg-slate-50 pb-20 ">

@@ -34,12 +34,13 @@ const Course = ({ course }) => {
           <FaStarHalf className="text-[#FFCD70]" />
           <p className="text-gray-900">4.9</p>
         </div>
-        {/* <div className="flex items-center gap-1">
-          <FiClock />
-          <p>02.33.35</p>
-        </div> */}
       </div>
-      <Link to={`/course/${id}`}>
+      {/* <Link to={`/course/${id}`}>
+        <h3 className="text-2xl font-medium hover:text-blue-500 transition-colors ease-in-out duration-300">
+          {title}
+        </h3>
+      </Link> */}
+      <Link to="/coursedetails">
         <h3 className="text-2xl font-medium hover:text-blue-500 transition-colors ease-in-out duration-300">
           {title}
         </h3>

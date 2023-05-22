@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { CiLogin } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 // import component
 import Drawer from "react-modern-drawer";
 //import styles
@@ -10,9 +10,29 @@ import { toast } from "react-hot-toast";
 import "react-modern-drawer/dist/index.css";
 import { AuthContext } from "../../Context/AuthProvider";
 
+
+const CustomLink = ({ to, title, className = "" }) => {
+  const location = useLocation();
+  // console.log(location.pathname);
+  // console.log(to);
+  return (
+    <NavLink to={to} className={`${className} relative group font-medium text-base text-gray-800 uppercase`}>
+      {title}
+      <span
+        className={`h-[2px] inline-block bg-gray-800 absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease-in-out duration-300
+        ${location.pathname === to ? "w-full" : "w-0"}
+        `}
+      >
+        &nbsp;
+      </span>
+    </NavLink>
+  );
+};
+
 const Header = () => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, userSignout } = useContext(AuthContext);
+  
 
   const handleSignOut = () => {
     userSignout()
@@ -27,24 +47,18 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-[#FFCD70] w-full py-6 px-5 lg:px-0">
+      <div className="bg-[#FFCD70] w-full py-5 px-5 lg:px-0">
         <div className="container mx-auto">
           <div className=" grid items-center grid-cols-2 lg:grid-cols-3">
             <ul className="items-center hidden space-x-8 lg:flex">
               <li>
-                <NavLink to="/" className="text-lg font-medium">
-                  Home
-                </NavLink>
+                <CustomLink to="/home" title="Home" className="" />
               </li>
               <li>
-                <NavLink to="/blogs" className="text-lg font-medium">
-                  Blogs
-                </NavLink>
+                <CustomLink to="/blogs" title="Blogs" className="" />
               </li>
               <li>
-                <NavLink to="/course" className="text-lg font-medium">
-                  Course
-                </NavLink>
+                <CustomLink to="/course" title="Course" className="" />
               </li>
             </ul>
             <Link to="/" className="inline-flex items-center lg:mx-auto">
