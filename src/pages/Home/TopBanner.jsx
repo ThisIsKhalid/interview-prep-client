@@ -34,7 +34,7 @@ const TopBanner = () => {
               placeholder="example@gmail.com"
             /> */}
             <Link to="/signup" className="lg:w-1/2 w-full">
-              <Button1 className=" w-full" text="Join Now to get free access" />
+              <Button1 className=" w-full text-base" text="Join Now to get free access" />
             </Link>
           </div>
         </div>

@@ -9,9 +9,9 @@ const OurFeature = () => {
     return (
       <section className="py-20">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 bg-[#ffefe7db] px-10 py-10 rounded-lg">
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 bg-[#ffefe7db] md:px-10 px-5  py-10 rounded-lg">
             <div className="lg:col-span-2 flex items-center bg-gray-800 rounded-lg shadow-xl lg:h-64 py-5 lg:py-0">
-              <div className="px-10">
+              <div className="md:px-10 px-5">
                 <h1 className="lg:text-5xl text-4xl text-white font-medium leading-tight mb-6">
                   Our Special
                   <br />
@@ -22,7 +22,7 @@ const OurFeature = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center px-10 shadow-xl h-64">
+            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center md:px-10 px-5 shadow-xl h-64">
               <img className="h-20 w-20" src={certificate} alt="" />
               <h3 className="text-2xl font-medium">Get Certificate</h3>
               <p className="text-gray-700">
@@ -30,7 +30,7 @@ const OurFeature = () => {
                 getting hired in your Dream Job
               </p>
             </div>
-            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center px-10 shadow-xl h-64">
+            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center md:px-10 px-5 shadow-xl h-64">
               <img className="h-20 w-20" src={instructor} alt="" />
               <h3 className="text-2xl font-medium">Amazing Instructor</h3>
               <p className="text-gray-700">
@@ -38,7 +38,7 @@ const OurFeature = () => {
                 the table.
               </p>
             </div>
-            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center px-10 shadow-xl h-64">
+            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center md:px-10 px-5 shadow-xl h-64">
               <img className="h-20 w-20" src={support} alt="" />
               <h3 className="text-2xl font-medium">Life Time Support</h3>
               <p className="text-gray-700">
@@ -46,7 +46,7 @@ const OurFeature = () => {
                 contacting instructors any time.
               </p>
             </div>
-            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center px-10 shadow-xl h-64">
+            <div className="bg-white rounded-lg flex flex-col gap-3 justify-center md:px-10 px-5 shadow-xl h-64">
               <img className="h-20 w-20" src={videoLesson} alt="" />
               <h3 className="text-2xl font-medium">Video Lesson</h3>
               <p className="text-gray-700">

@@ -24,6 +24,10 @@ body {
   position: relative;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 /* home top-banner */

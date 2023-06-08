@@ -62,7 +62,7 @@ const Header = () => {
               </li>
             </ul>
             <Link to="/" className="inline-flex items-center lg:mx-auto">
-              <span className="ml-2 text-3xl font-bold text-gray-900">
+              <span className=" md:text-3xl text-xl font-bold text-gray-900">
                 Interview Prep
               </span>
             </Link>

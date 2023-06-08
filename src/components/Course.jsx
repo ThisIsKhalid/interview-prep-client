@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Course = ({ course }) => {
   const { id, title } = course;
   return (
-    <div className="h-[485px] p-5 bg-white shadow-lg rounded-lg relative">
+    <div className="lg:h-[485px] md:h-[450px] h-[420px] p-5 bg-white shadow-lg rounded-lg relative">
       <div className="mb-6 rounded-lg overflow-hidden">
         <img
           className="w-full rounded-lg hover:scale-110 transition delay-75 ease-in-out duration-300"
