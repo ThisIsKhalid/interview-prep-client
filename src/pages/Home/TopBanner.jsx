@@ -1,8 +1,6 @@
-import Lottie from "lottie-react";
+
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import onlinePrep from "../../assets/images/onlinePrep.json";
 import Button1 from "../../components/buttons/Button_1";
 
 const TopBanner = () => {

@@ -58,7 +58,7 @@ const Header = () => {
                 <CustomLink to="/blogs" title="Blogs" className="" />
               </li>
               <li>
-                <CustomLink to="/course" title="Course" className="" />
+                <CustomLink to="/courses" title="Courses" className="" />
               </li>
             </ul>
             <Link to="/" className="inline-flex items-center lg:mx-auto">
@@ -134,8 +134,8 @@ const Header = () => {
                     <NavLink to="/blogs" onClick={toggleDrawer} className="">
                       Blog
                     </NavLink>
-                    <NavLink to="/course" onClick={toggleDrawer} className="">
-                      Course
+                    <NavLink to="/courses" onClick={toggleDrawer} className="">
+                      Courses
                     </NavLink>
                   </div>
                 </div>

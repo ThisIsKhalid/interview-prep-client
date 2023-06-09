@@ -78,7 +78,7 @@ const Blogs = () => {
         <div className="absolute top-0 left-0 h-full w-full bg-black/60"></div>
         <div className="z-50">
           <h1 className="text-4xl font-semibold text-gray-50">OUR BLOGS</h1>
-          <Breadcrumbs />
+          <Breadcrumbs lastCrumb="Blogs" />
         </div>
         {/* create blog */}
         <div className=" flex justify-end px-5 absolute bottom-0 left-0 w-full ">

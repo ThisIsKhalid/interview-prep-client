@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  BsArrowRight,
   BsBarChart,
   BsClock,
   BsFillJournalBookmarkFill,
@@ -7,15 +8,18 @@ import {
   BsPuzzle,
 } from "react-icons/bs";
 import { IoDocumentsOutline } from "react-icons/io5";
-import { BsArrowRight } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Button2 from "../../components/buttons/Button_2";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 const CourseDetails = () => {
   const [content, setContent] = useState("Overview");
-
+  // const location = useLocation()
+  // console.log(location);
 
   return (
     <section className="bg-slate-50 py-20 px-5">
+      <Breadcrumbs lastCrumb='i am fine'/>
       <div className="container mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
         {/* -----------left side --------------*/}
         <div className="flex flex-col w-full md:w-1/2">
@@ -194,13 +198,7 @@ const CourseDetails = () => {
             </h1>
 
             <Link className="w-full flex justify-center">
-              <button class="my-5 relative inline-flex items-center px-12 py-3 overflow-hidden text-xl font-medium text-gray-900 border-2 border-gray-900 rounded-full hover:text-white group hover:bg-gray-50 w-[85%]">
-                <span class="absolute left-0 block w-full h-0 transition-all bg-gray-900 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-                <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
-                  <BsArrowRight className="text-2xl"/>
-                </span>
-                <span class="relative mx-auto">Buy Now</span>
-              </button>
+              <Button2 text="Buy Now" />
             </Link>
           </div>
         </div>

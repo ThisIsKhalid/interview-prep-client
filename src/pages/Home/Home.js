@@ -5,14 +5,14 @@ import PopulerCourses from "./PopulerCourses";
 import StartingProcess from "./StartingProcess";
 import StatData from "./StatData";
 import TopBanner from "./TopBanner";
-import WhatWeProvide from "./WhatWeProvide";
+import CrackInterviewNow from "./CrackInterviewNow";
 
 const Home = () => {
   return (
     <>
       <TopBanner />
       <StatData />
-      <WhatWeProvide />
+      <CrackInterviewNow />
       <OurFeature />
       <PopulerCourses />
       <StartingProcess />
